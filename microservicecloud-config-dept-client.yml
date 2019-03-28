@@ -8,8 +8,8 @@ server:
     port: 8001
 spring:
     profiles: dev
-    spplication:
-        name: microservicecloud-config-dept-client
+    application:
+        name: microservicecloud-config-dept-client          #对外暴露的微服务的名字
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource        #当前数据源操作类型
         driver-class-name: org.gjt.mm.mysql.Driver          #mysql驱动包 
@@ -32,7 +32,7 @@ mybatis:
 eureka:
   client:   #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka/
   instance:
     instance-id: dept-8001.com             #eureka显示的服务的自定义名称
     prefer-ip-address: true                             #访问路径可以显示IP地址
